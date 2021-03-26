@@ -1,0 +1,32 @@
+{
+    "search.exclude": {
+        "**/dist/**": true
+    },
+    "[typescript]": {
+        "editor.detectIndentation": false,
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "[typescriptreact]": {
+        "editor.detectIndentation": false,
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "cSpell.ignorePaths": [
+        "**/.git/objects/**",
+        "**/.devcontainer/**",
+        "**/.vscode/**",
+        "**/yarn.lock"
+    ],
+    "cSpell.words": [
+        "esbuild",
+        "htmlhint",
+        "wasm"
+    ]
+}

@@ -1,0 +1,53 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.154.0/containers/docker-existing-dockerfile
+{
+	"name": "TypeScript React on VSCode",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".",
+		"args": {
+			"COMPOSE_VERSION": "1.27.4",
+			"NODE_VERSION": "v14.16.0"
+		},
+		"target": "devcontainer"
+	},
+	"containerUser": "vscode",
+	"remoteUser": "vscode",
+	"updateRemoteUserUID": true,
+	"overrideCommand": false,
+	"mounts": [
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+		"source=${localWorkspaceFolder}/.devcontainer/.extensions,target=/home/vscode/.vscode-server/extensions,type=bind"
+	],
+	"forwardPorts": [],
+	"runArgs": [
+		"--init",
+		"--net=host"
+	],
+	"containerEnv": {
+		"LOCAL_WORKSPACE": "${localWorkspaceFolder}"
+	},
+	"postCreateCommand": "bash -eux .devcontainer/post-create.sh",
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"ionutvmi.path-autocomplete",
+		"jgclark.vscode-todo-highlight",
+		"mkaufman.htmlhint",
+		"streetsidesoftware.code-spell-checker"
+	],
+	"settings": {
+		"terminal.integrated.allowChords": false,
+		"files.exclude": {
+			"**/.devcontainer/.extensions": true,
+			"**/.devcontainer/.go": true
+		},
+		"files.watcherExclude": {
+			"**/.devcontainer/.extensions": true,
+			"**/.devcontainer/.go": true
+		},
+		"search.exclude": {
+			"**/.devcontainer/.extensions": true,
+			"**/.devcontainer/.go": true
+		}
+	}
+}
