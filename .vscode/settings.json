@@ -1,5 +1,13 @@
 {
+    "terminal.integrated.allowChords": false,
+    "files.exclude": {
+        "**/.devcontainer/.extensions": true
+    },
+    "files.watcherExclude": {
+        "**/.devcontainer/.extensions": true
+    },
     "search.exclude": {
+        "**/.devcontainer/.extensions": true,
         "**/dist/**": true
     },
     "[typescript]": {

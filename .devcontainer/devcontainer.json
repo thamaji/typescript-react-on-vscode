@@ -30,24 +30,10 @@
 	"postCreateCommand": "bash -eux .devcontainer/post-create.sh",
 	"extensions": [
 		"dbaeumer.vscode-eslint",
+		"graphql.vscode-graphql",
 		"ionutvmi.path-autocomplete",
 		"jgclark.vscode-todo-highlight",
 		"mkaufman.htmlhint",
 		"streetsidesoftware.code-spell-checker"
-	],
-	"settings": {
-		"terminal.integrated.allowChords": false,
-		"files.exclude": {
-			"**/.devcontainer/.extensions": true,
-			"**/.devcontainer/.go": true
-		},
-		"files.watcherExclude": {
-			"**/.devcontainer/.extensions": true,
-			"**/.devcontainer/.go": true
-		},
-		"search.exclude": {
-			"**/.devcontainer/.extensions": true,
-			"**/.devcontainer/.go": true
-		}
-	}
+	]
 }
