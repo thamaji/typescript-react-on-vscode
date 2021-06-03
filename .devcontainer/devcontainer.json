@@ -7,7 +7,7 @@
 		"context": ".",
 		"args": {
 			"COMPOSE_VERSION": "1.27.4",
-			"NODE_VERSION": "v14.16.0"
+			"NODE_VERSION": "v14.17.0"
 		},
 		"target": "devcontainer"
 	},
@@ -24,10 +24,6 @@
 		"--init",
 		"--net=host"
 	],
-	"containerEnv": {
-		"CONTAINER_WORKSPACE": "${containerWorkspaceFolder}",
-		"LOCAL_WORKSPACE": "${localWorkspaceFolder}"
-	},
 	"postCreateCommand": "bash -eux .devcontainer/post-create.sh",
 	"extensions": [
 		"dbaeumer.vscode-eslint",

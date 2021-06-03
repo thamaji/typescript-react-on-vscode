@@ -26,6 +26,8 @@
             "source.organizeImports": true
         }
     },
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
     "cSpell.ignorePaths": [
         "**/.git/objects/**",
         "**/.devcontainer/**",
